@@ -1,0 +1,11 @@
+{
+    "env":{
+        "MYSQL_USER":"root", 
+        "MYSQL_PWD" :"admin",
+        "MYSQL_DB" :"restapi",
+        "MYSQL_HOST":"localhost",
+        "MYSQL_PORT":3306,
+        
+        "JWT_KEY":"thesecret"
+    }
+}
