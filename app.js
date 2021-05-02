@@ -37,7 +37,7 @@ app.use('/usuarios', rotaUsuarios);
 app.get("/", (req, res) =>{ 
     //res.send('ROTA DO BasasARRA'); 
     //res.sendFile(__dirname+'/index.html')
-    res.render('index');
+    return res.render('index');
     //return res.send("você está no barra")
 
 }) 
