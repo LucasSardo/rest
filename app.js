@@ -2,6 +2,8 @@ const express=require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
+app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
+app.set('view engine','handlebars');
 
 const rotaProdutos = require('./routes/produtos');
 const rotaPedidos = require('./routes/pedidos');
@@ -30,6 +32,15 @@ app.use((req, res, next) => {
 app.use('/produtos', rotaProdutos);
 app.use('/pedidos', rotaPedidos);
 app.use('/usuarios', rotaUsuarios);
+
+app.get("/", (req, res) =>{ 
+    //res.send('ROTA DO BasasARRA'); 
+    //res.sendFile(__dirname+'/index.html')
+    res.render('index', {id: req.params.id});
+
+}) 
+
+
 
 //QUANDO NÃO ENCONTRA A ROTA
 app.use((req, res, next) =>{
