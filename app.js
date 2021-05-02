@@ -33,13 +33,13 @@ app.use('/produtos', rotaProdutos);
 app.use('/pedidos', rotaPedidos);
 app.use('/usuarios', rotaUsuarios);
 
-//app.get("/", (req, res) =>{ 
+app.get("/", (req, res) =>{ 
     //res.send('ROTA DO BasasARRA'); 
     //res.sendFile(__dirname+'/index.html')
     //res.render('index', {id: req.params.id});
-  //  return res.send("você está no barra")
+    return res.send("você está no barra")
 
-//}) 
+}) 
 
 
 
