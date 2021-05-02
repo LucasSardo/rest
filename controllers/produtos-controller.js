@@ -21,7 +21,7 @@ exports.getprodutos =(req, res, next) => {
                             request: {
                                 tipo:'GET',
                                 descricao:'retorna os detalhes de um produto',
-                                url: process.env.URL_API +'produtos/' + prod.id_produto
+                                url: 'http://localhost:3000/produtos/' + prod.id_produto
                             }
                         }
                 })
@@ -50,7 +50,7 @@ exports.postprodutos =  (req, res, next) => {
                     request:{
                         tipo: 'POST',
                         descricao: 'Insere um produto',
-                        url:process.env.URL_API + 'produtos'
+                        url:'http://localhost:3000/produtos'
 
                     }
                 }
@@ -84,7 +84,7 @@ exports.getpedidoespecifico = (req, res, next) => {
                   request:{
                       tipo: 'GET',
                       descricao: 'Retorna detalhes de um produto específico',
-                      url:process.env.URL_API + 'produtos'
+                      url:'http://localhost:3000/produtos'
 
                   }
               }
@@ -111,7 +111,7 @@ exports.patchprodutos = (req, res, next) => {
                     request:{
                         tipo: 'PATCH',
                         descricao: 'Altera um produto',
-                        url:process.env.URL_API + 'produtos/' + req.body.id_produto
+                        url:'http://localhost:3000/produtos/' + req.body.id_produto
 
                     }
                 }
@@ -135,7 +135,7 @@ exports.deleteprodutos = (req, res, next) => {
                    request:{
                        tipo:'POST',
                        descrição: 'insere um produto',
-                       url: process.env.URL_API + 'produtos',
+                       url: 'http://localhost:3000/produtos',
                        body: {
                            nome: 'string',
                            preco: 'float'
