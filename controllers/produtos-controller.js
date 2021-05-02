@@ -1,5 +1,5 @@
 const mysql = require('../mysql').pool;
-const hdbars = require('express-handlebars');
+//const hdbars = require('express-handlebars');
 
 
 exports.getprodutos =(req, res, next) => {
