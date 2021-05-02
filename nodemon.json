@@ -1,11 +1,11 @@
 {
     "env":{
-        "MYSQL_USER":"bf7d657435c86b", 
-        "MYSQL_PWD" :"63ef81b4",
-        "MYSQL_DB" :"heroku_96da5b044c0ae38",
-        "MYSQL_HOST":"us-cdbr-east-03.cleardb.com",
+        "MYSQL_USER":"root", 
+        "MYSQL_PWD" :"admin",
+        "MYSQL_DB" :"restapi",
+        "MYSQL_HOST":"localhost",
         "MYSQL_PORT":3306,
-        
-        "JWT_KEY":"thesecret"
+        "JWT_KEY":"thesecret",
+        "URL_API": "http://localhost:3000/"
     }
 }

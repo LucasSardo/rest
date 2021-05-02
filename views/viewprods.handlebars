@@ -1,0 +1,23 @@
+ <link rel="stylesheet" href="/css/selectstyle.css">
+<table>
+
+      <tr>
+          
+        <th colspan="2">Ação</th>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Idade</th>
+      </tr>
+    
+    {{#dados}}
+        <tr>
+            
+            <td><a href='deletar/{{ID}}' class='deletar'><img src='/img/trash.png'></a> </td>
+            <td><a href='update/{{ID}}' class='update'><img src='/img/edit.jpg'></a> </td>
+            <td>{{ID}}</td>
+            <td>{{NOME}}</td>
+            <td>{{IDADE}}</td>
+        </tr>
+    {{/dados}}
+</table>
+

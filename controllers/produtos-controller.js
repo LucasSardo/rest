@@ -1,4 +1,6 @@
 const mysql = require('../mysql').pool;
+const hdbars = require('express-handlebars');
+
 
 exports.getprodutos =(req, res, next) => {
     //res.status(200).send({
@@ -19,7 +21,7 @@ exports.getprodutos =(req, res, next) => {
                             request: {
                                 tipo:'GET',
                                 descricao:'retorna os detalhes de um produto',
-                                url: 'http://localhost:3000/produtos/' + prod.id_produto
+                                url: process.env.URL_API +'produtos/' + prod.id_produto
                             }
                         }
                 })
@@ -48,7 +50,7 @@ exports.postprodutos =  (req, res, next) => {
                     request:{
                         tipo: 'POST',
                         descricao: 'Insere um produto',
-                        url:'http://localhost:3000/produtos'
+                        url:process.env.URL_API + 'produtos'
 
                     }
                 }
@@ -82,7 +84,7 @@ exports.getpedidoespecifico = (req, res, next) => {
                   request:{
                       tipo: 'GET',
                       descricao: 'Retorna detalhes de um produto específico',
-                      url:'http://localhost:3000/produtos'
+                      url:process.env.URL_API + 'produtos'
 
                   }
               }
@@ -109,7 +111,7 @@ exports.patchprodutos = (req, res, next) => {
                     request:{
                         tipo: 'PATCH',
                         descricao: 'Altera um produto',
-                        url:'http://localhost:3000/produtos/' + req.body.id_produto
+                        url:process.env.URL_API + 'produtos/' + req.body.id_produto
 
                     }
                 }
@@ -133,7 +135,7 @@ exports.deleteprodutos = (req, res, next) => {
                    request:{
                        tipo:'POST',
                        descrição: 'insere um produto',
-                       url: 'http://localhost:3000/produtos',
+                       url: process.env.URL_API + 'produtos',
                        body: {
                            nome: 'string',
                            preco: 'float'
