@@ -2,8 +2,9 @@ const express=require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
-//app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
-//app.set('view engine','handlebars');
+const hdbars = require('express-handlebars');
+app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
+app.set('view engine','handlebars');
 
 const rotaProdutos = require('./routes/produtos');
 const rotaPedidos = require('./routes/pedidos');
@@ -36,8 +37,8 @@ app.use('/usuarios', rotaUsuarios);
 app.get("/", (req, res) =>{ 
     //res.send('ROTA DO BasasARRA'); 
     //res.sendFile(__dirname+'/index.html')
-    //res.render('index', {id: req.params.id});
-    return res.send("você está no barra")
+    res.render('index');
+    //return res.send("você está no barra")
 
 }) 
 
