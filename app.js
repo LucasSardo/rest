@@ -1,7 +1,7 @@
 const express=require('express');
 const app = express();
 const morgan = require('morgan');
-//const bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
 //app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
 //app.set('view engine','handlebars');
 
@@ -10,7 +10,7 @@ const rotaPedidos = require('./routes/pedidos');
 const rotaUsuarios = require('./routes/usuarios');
 
 app.use(morgan('dev'));//EXTENSAO QUE DA RESPOSTAS DE GET E POST
-app.use('/uploads',express.static('uploads '))
+app.use('/uploads',express.static('uploads'))
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -33,13 +33,13 @@ app.use('/produtos', rotaProdutos);
 app.use('/pedidos', rotaPedidos);
 app.use('/usuarios', rotaUsuarios);
 
-app.get("/", (req, res) =>{ 
+//app.get("/", (req, res) =>{ 
     //res.send('ROTA DO BasasARRA'); 
     //res.sendFile(__dirname+'/index.html')
     //res.render('index', {id: req.params.id});
-    return res.send("você está no barra")
+  //  return res.send("você está no barra")
 
-}) 
+//}) 
 
 
 
