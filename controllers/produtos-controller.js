@@ -27,7 +27,7 @@ exports.getprodutos =(req, res, next) => {
                 })
             }
             //return res.status(200).send({response})
-            return res.render('viewprods');
+            return res.render('viewprods',{produto:produtos});
         })
     })
 }
@@ -150,4 +150,4 @@ exports.deleteprodutos = (req, res, next) => {
         )
     });
 }
-module.exports =  produtos-controller;
+//module.exports =  produtos-controller;
