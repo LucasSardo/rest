@@ -26,7 +26,8 @@ exports.getprodutos =(req, res, next) => {
                         }
                 })
             }
-            return res.status(200).send({response})
+            //return res.status(200).send({response})
+            return res.render(__dirname+'/views/viewsprods');
         })
     })
 }
