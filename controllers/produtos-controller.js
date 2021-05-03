@@ -27,7 +27,7 @@ exports.getprodutos =(req, res, next) => {
                 })
             }
             //return res.status(200).send({response})
-            return res.render('viewsprods');
+            return res.render('viewprods');
         })
     })
 }
