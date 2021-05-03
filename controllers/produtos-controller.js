@@ -150,3 +150,4 @@ exports.deleteprodutos = (req, res, next) => {
         )
     });
 }
+module.exports =  produtos-controller;
