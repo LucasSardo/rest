@@ -3,7 +3,13 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const hdbars = require('express-handlebars');
-app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
+//app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
+app.engine('handlebars', hdbars({extname: "handlebars",defaultLayout: "", layoutsDir: "", }));
+
+
+
+
+
 app.set('view engine','handlebars');
 
 const rotaProdutos = require('./routes/produtos');
