@@ -4,3 +4,6 @@ const port = process.env.PORT ||3000;
 const server = http.createServer(app);
 
 server.listen(port);
+const hdbars = require('express-handlebars');
+//app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
+app.engine('handlebars', hdbars({extname: "handlebars",defaultLayout: "Main", layoutsDir: "views/layouts", }));
