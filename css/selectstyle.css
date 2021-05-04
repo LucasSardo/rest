@@ -1,0 +1,35 @@
+*{background:black;margin: 10px; padding:0; box-sizing:border-box;font-family: verdana, arial, helvetica;}
+
+
+td{
+
+    text-align:center;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+
+
+th{
+    background-color: #ff0099;
+    color: black;
+}
+  table, td {
+    border: 1px solid #444444;
+
+
+    color: #FF0099; 
+  }
+
+  img{ 
+    height:20px;
+    width:30px;
+    padding:0px;
+    margin:0px;
+    border: 0px;
+    margin-top: 0;
+}
+a{ 
+  color:white;
+  font-size: 30px;
+}

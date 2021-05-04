@@ -1,0 +1,48 @@
+*{background:black;margin: 10px; padding:0; box-sizing:border-box;font-family: verdana, arial, helvetica;}
+
+
+h1{
+    color: #FF0099; 
+    width: 100%; 
+    text-align:center;
+    font-size: 40px;
+    padding-top: 20px;
+}
+a{
+    color:white;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a:hover{
+    color: #FF0099;
+    
+    
+}
+a:link {
+    text-decoration: none;
+  }
+
+  hr{
+      border-color: #FF0099;
+  }
+
+input{ 
+    background-color: white;
+    color:black;
+    height:30px;
+
+  }
+  #btnSubmit{
+      background-color: #FF0099;
+      width: 180px;
+      border: none;
+      transition-duration: 1s;
+  }
+  #btnSubmit:hover{
+      background-color: #aa006e;
+      cursor:pointer;
+      
+
+  }

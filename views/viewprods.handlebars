@@ -3,13 +3,14 @@
 
       <tr>
           
-        <th colspan="2">Ação</th>
+ 
         <th>Id</th>
-        <th>Nome</th>
-        <th>Idade</th>
+        <th>PRODUTO</th>
+        <th>PRECO</th>
+        <th>x</th>
       </tr>
     
-    {{#produtos}}
+    {{#produto}}
         <tr>
             
             <!--<td><a href='deletar/{{ID}}' class='deletar'><img src='/img/trash.png'></a> </td>
@@ -17,7 +18,8 @@
             <td>{{id_produto}}</td>
             <td>{{nome}}</td>
             <td>{{preco}}</td>
+            <td>{{request.tipo}}</td>
         </tr>
-    {{/produtos}}
+    {{/produto}}
 </table>
 

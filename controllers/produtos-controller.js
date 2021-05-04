@@ -27,7 +27,8 @@ exports.getprodutos =(req, res, next) => {
                 })
             }
             //return res.status(200).send({response})
-            return res.render('viewprods',{produto:produtos});
+            console.log(response.produtos[1].id_produto)
+            return res.render('viewprods',{produto:response.produtos});
         })
     })
 }
