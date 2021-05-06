@@ -48,8 +48,8 @@
                 //res.sendFile(__dirname+'/views/index.html')
                 //return res.send("você está no barra")
                 //return res.render(__dirname+'/views/index');
-                return res.render('index');
-                
+                //return res.render('index'); //{"erro":{"mensagem":"ENOENT: no such file or directory, open '/app/views/layouts/Main.handlebars'"}}
+                return res.render('Main');
             
             }) 
 
