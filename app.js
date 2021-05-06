@@ -51,7 +51,8 @@
                 //return res.render(__dirname+'/views/index');
                 //return res.render('index'); //{"erro":{"mensagem":"ENOENT: no such file or directory, open '/app/views/layouts/Main.handlebars'"}}
                 //return res.render('Main'); //{"erro":{"mensagem":"Failed to lookup view \"Main\" in views directory \"/app/views\""}}
-                return res.render(__dirname+'/views/layouts/Main'); //{"erro":{"mensagem":"Failed to lookup view \"Main\" in views directory \"/app/views\""}}
+                //return res.render(__dirname+'/views/layouts/Main'); //{"erro":{"mensagem":"Failed to lookup view \"/app/views/layouts/Main\" in views directory \"/app/views\""}}
+                return res.render(__dirname+'/views/layouts/Main.handlebars'); 
             }) 
 
 
