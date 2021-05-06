@@ -8,7 +8,7 @@
             app.use('/css',express.static('css'));
             app.use('/uploads',express.static('uploads'))
             app.use('/views',express.static('views'))
-
+            app.use('/views/layouts',express.static('views/layouts'))
             const hdbars = require('express-handlebars');
             //app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
             app.engine('handlebars', hdbars({extname: "handlebars",defaultLayout: "Main", layoutsDir: "./views/layouts", }));
@@ -49,9 +49,9 @@
                 //res.sendFile(__dirname+'/views/index.html')
                 //return res.send("você está no barra")
                 //return res.render(__dirname+'/views/index');
-                return res.render('index'); //{"erro":{"mensagem":"ENOENT: no such file or directory, open '/app/views/layouts/Main.handlebars'"}}
+                //return res.render('index'); //{"erro":{"mensagem":"ENOENT: no such file or directory, open '/app/views/layouts/Main.handlebars'"}}
                 //return res.render('Main'); //{"erro":{"mensagem":"Failed to lookup view \"Main\" in views directory \"/app/views\""}}
-            
+                return res.render(__dirname+'/views/layouts/Main'); //{"erro":{"mensagem":"Failed to lookup view \"Main\" in views directory \"/app/views\""}}
             }) 
 
 
