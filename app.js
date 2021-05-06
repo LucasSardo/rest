@@ -9,7 +9,7 @@
             app.use('/uploads',express.static('uploads'))
             app.use('/views',express.static('views'))
             app.use('/views/layouts',express.static('views/layouts'))
-            app.use('/views/*',express.static('views/*'))
+            app.use('/',express.static('/'))
             const hdbars = require('express-handlebars');
             //app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
             app.engine('handlebars', hdbars({extname: "handlebars",defaultLayout: "Main", layoutsDir: "./views/layouts", }));
@@ -55,7 +55,7 @@
                 //return res.render(__dirname+'/views/layouts/Main'); //{"erro":{"mensagem":"Failed to lookup view \"/app/views/layouts/Main\" in views directory \"/app/views\""}}
                 //return res.render(__dirname+'/views/layouts/Main.handlebars');// "erro":{"mensagem":"Failed to lookup view \"/app/views/layouts/Main.handlebars\" in views directory \"/app/views\""}}
                 //return res.render('Main.handlebars'); //{"erro":{"mensagem":"Failed to lookup view \"Main.handlebars\" in views directory \"/app/views\""}}
-                return res.render('index.handlebars');
+                return res.render('index');
             }) 
 
 
