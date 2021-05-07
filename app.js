@@ -11,12 +11,20 @@
             const hdbars = require('express-handlebars');
             //const diretorio = path.join(__dirname, 'views/layouts')
             const diretorio = __dirname + '/views/layouts'
-            console.log(path.join(__dirname, 'views/layouts')
+            
             //app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
             //app.engine('handlebars', hdbars({extname: "handlebars",defaultLayout: "Main", layoutsDir: "./views/layouts", }));
             //app.engine('handlebars', hdbars({extname: "handlebars", defaultLayout: "Main", layoutsDir: path.join(__dirname, '/views/layouts' }));
             app.engine('handlebars', hdbars({extname: "handlebars",defaultLayout: "Main", layoutsDir: diretorio}));
+                        
+          app.get("/", (req, res) =>{ 
+                //res.send('ROTA DO BasasARRA'); 
+                //res.sendFile(__dirname+'/views/index.html')
+               // return res.render(__dirname+'/views/index');
+                        return res.send(path.join(__dirname, 'views/layouts')
+                //return res.send("você está no barra")
 
+            }) 
 
             app.set('view engine','handlebars');
 
@@ -48,13 +56,7 @@
             app.use('/pedidos', rotaPedidos);
             app.use('/usuarios', rotaUsuarios);
 
-            app.get("/", (req, res) =>{ 
-                //res.send('ROTA DO BasasARRA'); 
-                //res.sendFile(__dirname+'/views/index.html')
-                return res.render(__dirname+'/views/index');
-                //return res.send("você está no barra")
-
-            }) 
+  
 
 
 
