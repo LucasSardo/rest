@@ -10,8 +10,8 @@
 
             const hdbars = require('express-handlebars');
             //app.engine('handlebars',hdbars  ({defaultLayout:'Main'}));
-          //  app.engine('handlebars', hdbars({extname: "handlebars",defaultLayout: "Main", layoutsDir: "./views/layouts", }));
-            app.engine('handlebars', hdbars({extname: "handlebars", defaultLayout: "Main",layoutsDir: path.join(__dirname, 'views/layouts' }));
+            app.engine('handlebars', hdbars({extname: "handlebars",defaultLayout: "Main", layoutsDir: "./views/layouts", }));
+            //app.engine('handlebars', hdbars({extname: "handlebars", defaultLayout: "Main",layoutsDir: path.join(__dirname, 'views/layouts' }));
 
 
             app.set('view engine','handlebars');
