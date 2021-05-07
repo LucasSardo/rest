@@ -20,7 +20,7 @@
           app.get("/", (req, res) =>{ 
                 //res.send('ROTA DO BasasARRA'); 
                 //res.sendFile(__dirname+'/views/index.html')
-                return res.render('index');
+                return res.render('index.handlebars');
                       
                         //return res.send(diretorio)
                 //return res.send("você está no barra")
